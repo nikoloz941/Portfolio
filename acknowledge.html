@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Acknowledge – Stage BTS 2ᵉ année</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/entreprise.css">
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <div class="nav-logo">NIKOLOZ FEROIANI</div>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="parcours.html" class="active">Parcours</a>
+      <a href="competence.html">Compétences</a>
+      <a href="projets.html">Projets</a>
+      <a href="passions.html">Passions</a>
+      <a href="veille.html">Veille</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Présentation générale -->
+  <section class="intro">
+    <h1>Acknowledge</h1>
+    <p>
+      ACKnowledge est une société de services informatiques basée à Paris, spécialisée dans la cybersécurité,
+      le cloud et les approches DevSecOps. Elle accompagne les entreprises dans la modernisation, la sécurisation
+      et le support de leurs systèmes d'information.
+    </p>
+    <p>
+      L’entreprise a notamment une agence à Paris dans le 14ᵉ arrondissement (Héron Building, 10ᵉ étage – 66 Avenue du Maine, 75014 Paris).
+    </p>
+  </section>
+
+  <!-- Contexte du stage -->
+  <section class="context">
+    <h2>Contexte du stage</h2>
+    <p>
+      Ce stage s’inscrit dans ma deuxième année de BTS SIO option SISR, réalisé au sein d’ACKnowledge à Paris-Montparnasse.
+      J’ai eu l’opportunité d’évoluer dans un environnement professionnel axé sur la cybersécurité, les infrastructures
+      cloud et le support technique, en lien direct avec les enjeux actuels de protection des systèmes d'information.
+    </p>
+  </section>
+
+  <!-- Missions réalisées -->
+  <section class="missions">
+  <h2>Missions réalisées</h2>
+  <ul>
+    <li>Support utilisateurs niveau 2</li>
+    <li>Gestion des accès sécurisés (BeyondTrust)</li>
+    <li>Administration de machines virtuelles (vCenter)</li>
+    <li>Analyse et optimisation de règles firewall</li>
+    <li>Participation à des environnements Azure</li>
+    <li>Gestion du parc informatique :
+      <ul>
+        <li>Réalisation d’un LLD (Low-Level Design) pour cartographier le réseau</li>
+        <li>Repérage de toutes les prises RJ45 et vérification de leur brassage</li>
+        <li>Documentation complète de l’infrastructure réseau et du parc informatique</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+
+ <section class="organigramme">
+  <h2>Organigramme de l’entreprise</h2>
+
+  <!-- Image cliquable -->
+  <div class="org-image">
+    <img id="orgImg" src="img/image.png" 
+         alt="Organigramme de l'entreprise Acknowledge">
+  </div>
+
+  <p>
+    Organigramme représentant la structure interne de l’entreprise Acknowledge,
+    mettant en évidence les différents pôles et responsabilités.
+  </p>
+</section>
+
+<!-- Lightbox overlay -->
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+
+
+
+  </section>
+
+  <!-- Bouton retour -->
+  <a href="parcours.html" class="btn-retour">← Retour au parcours</a>
+
+</main>
+
+<footer>
+  <div class="container">
+    Portfolio BTS SIO SISR – Nikoloz Feroiani ©
+  </div>
+</footer>
+
+</body>
+<script>
+  // Sélection des éléments
+  const modal = document.getElementById("imgModal");
+  const img = document.getElementById("orgImg");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.getElementsByClassName("close")[0];
+
+  // Clique sur l'image → ouverture
+  img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+
+  // Clique sur le X → fermeture
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Clique en dehors de l'image → fermeture
+  modal.onclick = function(e) {
+    if(e.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+</html>
